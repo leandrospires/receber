@@ -1,5 +1,6 @@
 package com.example.receber.controllers;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.receber.domain.Receber;
+import com.example.receber.domain.ReceberJson;
 import com.example.receber.utils.Utils;
 
 @Controller
@@ -38,19 +40,46 @@ public class TodoController {
 		
 	}
 	
-	@GetMapping("testeservice/receber")
+	@GetMapping("testeservice/recebermap")
 	@ResponseBody
-	public Map<String, Receber> receber(){
+	public Map<String, Receber> receberMap(){
 		
-		HashMap<String, Receber> recebido = new HashMap<>();
-		Receber rec = new Receber();
+		HashMap<String, Receber> recs = new HashMap<>();
+		Receber rec1 = new Receber();
+		Receber rec2 = new Receber();
 		
-		rec.setId(1);
-		rec.setDados("dados recebidos");
+		rec1.setCod(1);
+		rec1.setDados("dados recebidos map 1");
 		
-		recebido.put("Recebido", rec);
+		recs.put("Recebido 1", rec1);
 		
-		return recebido;
+		rec2.setCod(2);
+		rec2.setDados("dados recebidos map 2");
+		
+		recs.put("Recebido 2", rec2);
+		
+		return recs;
+	}
+	
+	@GetMapping("testeservice/receberjson")
+	@ResponseBody
+	public ArrayList<ReceberJson> receberJson(){
+		
+		ArrayList<ReceberJson> recs = new ArrayList<ReceberJson>();
+		ReceberJson rec1 = new ReceberJson();
+		ReceberJson rec2 = new ReceberJson();
+		
+		rec1.setCod(1);
+		rec1.setDados("dados recebidos json 1");
+		
+		recs.add(rec1);
+		
+		rec2.setCod(2);
+		rec2.setDados("dados recebidos json 2");
+		
+		recs.add(rec2);
+		
+		return recs;
 	}
 	
 }
