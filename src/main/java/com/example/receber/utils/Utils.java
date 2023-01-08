@@ -9,7 +9,7 @@ public class Utils {
 		
 		Date data = new Date();
 		
-		SimpleDateFormat fmt = new SimpleDateFormat("[dd-MM-yyyy hh:mm:ss] - ");
+		SimpleDateFormat fmt = new SimpleDateFormat("[dd-MM-yyyy hh:mm:ss]");
 		
 		String dtFmt = fmt.format(data);
 		

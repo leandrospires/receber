@@ -9,6 +9,9 @@ public class ReceberJson {
 	
 	@JsonProperty("dados")
 	private String dados;
+	
+	@JsonProperty("dataHoraAtual")
+	private String dataHoraAtual;
 
 	public int getCod() {
 		return cod;
@@ -26,7 +29,12 @@ public class ReceberJson {
 		this.dados = dados;
 	}
 
+	public String getDataHoraAtual() {
+		return dataHoraAtual;
+	}
 
-	
+	public void setDataHoraAtual(String dataHoraAtual) {
+		this.dataHoraAtual = dataHoraAtual;
+	}
 	
 }
