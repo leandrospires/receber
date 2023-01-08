@@ -1,1 +1,1 @@
-Progama teste usando springboot e Swagger: /swagger-ui.html
+Progama teste usando springboot e Swagger: http://localhost:8080/swagger-ui.html
